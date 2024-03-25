@@ -1,0 +1,20 @@
+public class Esporte {
+  int id;
+  String descricao;
+
+  //id
+  int getId() {
+    return id;
+  }
+  void setId(int id){
+    this.id = id;
+  }
+  //descricao
+  String getDescricao(){
+    return descricao;
+  }
+  void setDescricao(String descricao){
+    this.descricao = descricao;
+  }
+
+}
