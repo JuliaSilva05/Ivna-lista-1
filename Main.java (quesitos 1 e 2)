@@ -1,0 +1,55 @@
+import java.util.Scanner;
+  
+public class Main{
+  public static void main(String[] args){
+    Scanner leitor = new Scanner(System.in);
+    Esporte esporte = new Esporte();
+    Atleta atleta = new Atleta();
+
+    
+    System.out.println("Diga o número de identificação do esporte: ");
+    esporte.setId(leitor.nextInt());
+    leitor.nextLine();
+    do{
+      System.out.println("Diga a descrição do esporte: ");
+      esporte.setDescricao(leitor.nextLine());
+      if (esporte.descricao == "" || esporte.descricao == " " ){
+        System.out.println("A descrição precisa ter pelo menos um dígito!");
+      }
+    } while (esporte.descricao == "" || esporte.descricao == " " );
+    /*
+    System.out.println("Diga o nome do esporte: ");
+    esporte.setDescricao(leitor.nextLine());
+    */
+    System.out.println("Diga o código do atleta: ");
+    atleta.setCodigo(leitor.nextInt());
+    leitor.nextLine();
+    System.out.println("Diga o nome do atleta: ");
+    atleta.setNome(leitor.nextLine());
+    System.out.println("Diga a nacionalidade do atleta: ");
+    atleta.setNacionalidade(leitor.nextLine());
+    
+    do {
+      System.out.println("Diga o recorde do atleta: ");
+      atleta.setRecorde(leitor.nextInt());
+      if (atleta.recorde <= 0){
+        System.out.println("O jogador precisa ter um ou mais recordes!\n");
+      }
+    } while (atleta.recorde <= 0);
+    
+    
+    
+    //Atleta atleta = new Atleta(1, "João", "Brasileiro", 100);
+    //esporte.setId(1);
+    //esporte.setDescricao("Futebol");
+    System.out.println("\n" + "Esporte: " + esporte.getId());
+    System.out.println("    Descrição: "+esporte.getDescricao());
+    
+    System.out.println("\n" + "Atleta: " + atleta.getCodigo());
+    System.out.println("    Nome: "+atleta.getNome());
+    System.out.println("    Nacionalidade: "+atleta.getNacionalidade());
+    System.out.println("    Recorde: "+atleta.getRecorde());
+    
+    //System.out.println("Atleta: " + atleta.getCodigo() + " - " + atleta.getNome() + " - " + atleta.getNacionalidade() + " - " + atleta.getRecorde());
+  }
+}
