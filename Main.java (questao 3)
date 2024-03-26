@@ -1,0 +1,50 @@
+import java.util.Scanner;
+  
+public class Main{
+  public static void main(String[] args){
+    Scanner leitor = new Scanner(System.in);
+    //Esporte esporte = new Esporte();
+    Atleta atleta = new Atleta();
+    
+    System.out.println("Diga o código do atleta: ");
+    atleta.setCodigo(leitor.nextInt());
+    leitor.nextLine();
+    System.out.println("Diga o nome do atleta: ");
+    atleta.setNome(leitor.nextLine());
+    leitor.nextLine();
+    System.out.println("Diga a nacionalidade do atleta: ");
+    atleta.setNacionalidade(leitor.nextLine());
+    leitor.nextLine();
+    
+    do {
+      System.out.println("Diga o recorde do atleta: ");
+      atleta.setRecorde(leitor.nextInt());
+      if (atleta.recorde <= 0){
+        System.out.println("O jogador precisa ter um ou mais recordes!\n");
+      }
+    } while (atleta.recorde <= 0);
+
+    
+    System.out.println("Diga o número de identificação do esporte: ");
+    atleta.esporte.setId(leitor.nextInt());
+    leitor.nextLine();
+    do{
+      System.out.println("Diga a descrição do esporte: ");
+      atleta.esporte.setDescricao(leitor.nextLine());
+      if (atleta.esporte.descricao == "" || atleta.esporte.descricao == " " ){
+        System.out.println("A descrição precisa ter pelo menos um dígito!");
+      }
+    } while (atleta.esporte.descricao == "" || atleta.esporte.descricao == " " );
+    
+
+    System.out.println("\n" + "Esporte: " + atleta.esporte.getId());
+    System.out.println("    Descrição: "+atleta.esporte.getDescricao());
+    
+    System.out.println("\n" + "Atleta: " + atleta.getCodigo());
+    System.out.println("    Nome: "+atleta.getNome());
+    System.out.println("    Nacionalidade: "+atleta.getNacionalidade());
+    System.out.println("    Recorde: "+atleta.getRecorde());
+    
+    
+  }
+}
