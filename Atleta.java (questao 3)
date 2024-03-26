@@ -1,0 +1,45 @@
+public class Atleta {
+  private int codigo;
+  private String nome;
+  private String nacionalidade;
+  int recorde;
+  Esporte esporte = new Esporte();
+  
+  //codigo
+  int getCodigo() {
+    return codigo;
+  }
+  void setCodigo(int codigo) {
+    this.codigo = codigo;
+  }
+  //nome
+  String getNome(){
+    return nome;
+  }
+  void setNome(String nome){
+    this.nome = nome;
+  }
+  //nacionalidade
+  String getNacionalidade(){
+    return nacionalidade;
+  }
+  void setNacionalidade(String nacionalidade){
+    this.nacionalidade = nacionalidade;
+  }
+  //recorde
+  int getRecorde(){
+    return recorde;
+  }
+  void setRecorde(int recorde){
+    this.recorde = recorde;
+  }
+  /*
+  public Atleta(int codigo, String nome, String nacionalidade, int recorde){
+    this.codigo = codigo;
+    this.nome = nome;
+    this.nacionalidade = nacionalidade;
+    this.recorde = recorde;
+  }
+  */
+
+}
